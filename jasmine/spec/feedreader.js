@@ -101,7 +101,7 @@ $(function() {
                 $previous = $('.feed .entry').html();
                 loadFeed((id + 1), function() {
                     done();
-                })
+                });
             });
 
         });
@@ -109,8 +109,8 @@ $(function() {
         afterEach(function(done) {
             loadFeed(id, function() {
                 done();
-            })
-        })
+            });
+        });
 
         it('content changes', function(done) {
             expect($('.feed .entry').html()).not.toEqual($previous);
